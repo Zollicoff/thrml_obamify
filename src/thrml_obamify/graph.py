@@ -93,27 +93,18 @@ def get_neighbor_pairs(nodes: list[list[CategoricalNode]]) -> list[tuple[Categor
 
 def create_gibbs_spec(
     free_blocks: list[Block],
-    clamped_blocks: list[Block],
-    num_palette_colors: int
+    clamped_blocks: list[Block]
 ) -> BlockGibbsSpec:
     """Create BlockGibbsSpec for thrml sampling.
 
     Args:
         free_blocks: List of blocks to be sampled
         clamped_blocks: List of blocks to keep fixed (usually empty)
-        num_palette_colors: Number of discrete states per categorical node
 
     Returns:
         BlockGibbsSpec for use in sampling
     """
-    node_shape_dtypes = {
-        CategoricalNode: jax.ShapeDtypeStruct((), jnp.int32)
-    }
-
-    spec = BlockGibbsSpec(
-        free_blocks=free_blocks,
-        clamped_blocks=clamped_blocks,
-        node_shape_dtypes=node_shape_dtypes
-    )
+    # Use positional arguments - THRML API requires this
+    spec = BlockGibbsSpec(free_blocks, clamped_blocks)
 
     return spec

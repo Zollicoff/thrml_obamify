@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import jax.numpy as jnp
-from thrml import CategoricalNode
+from thrml import CategoricalNode, Block
 from thrml.models.discrete_ebm import CategoricalEBMFactor
 
 
@@ -91,10 +91,10 @@ def create_unary_factor(
     # Scale by temperature
     scaled_biases = beta * flat_biases
 
-    # Create factor with one node group (unary)
+    # Create factor with one node group (unary) - wrap in Block
     factor = CategoricalEBMFactor(
-        node_groups=[flat_nodes],
-        weights=scaled_biases[:, :, None]  # Add dummy dimension for weight tensor shape
+        node_groups=[Block(flat_nodes)],
+        weights=scaled_biases
     )
 
     return factor
@@ -133,9 +133,9 @@ def create_pairwise_factor(
     nodes1 = [pair[0] for pair in neighbor_pairs]
     nodes2 = [pair[1] for pair in neighbor_pairs]
 
-    # Create pairwise factor
+    # Create pairwise factor - wrap node lists in Blocks
     factor = CategoricalEBMFactor(
-        node_groups=[nodes1, nodes2],
+        node_groups=[Block(nodes1), Block(nodes2)],
         weights=pairwise_weights
     )
 
