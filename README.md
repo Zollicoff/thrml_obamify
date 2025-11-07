@@ -46,7 +46,6 @@ macOS (Metal / Apple Silicon):
 ```bash
 conda env create -f environment-macos-metal.yml
 conda activate thrml-obamify
-pre-commit install
 ```
 
 Windows (CPU for development only):
@@ -54,14 +53,13 @@ Windows (CPU for development only):
 ```bash
 conda env create -f environment-windows-cpu.yml
 conda activate thrml-obamify
-pre-commit install
 ```
 
 ### 2) Run the CLI
 
 ```bash
 obamify \
-  --source assets/your_image.jpg \
+  --source assets/image1.png \
   --target assets/obama.jpg \
   --steps 500 \
   --palette_size 24 \
@@ -72,8 +70,8 @@ obamify \
 
 ```
 output/
-  obamified.png   # final image
-  progress.gif    # optional animation of the cooling process
+  obamify_YYYYMMDD-HHMMSS.png   # final image (timestamped)
+  obamify_YYYYMMDD-HHMMSS.gif   # optional animation of the cooling process
 ```
 
 ---
@@ -96,12 +94,6 @@ output/
 * Start small (e.g., 128×128) to get quick feedback.
 * Try grayscale first, then color palettes of 16–32 colors.
 * Save intermediate frames to see the cooling process.
-
----
-
-## Roadmap
-
-*
 
 ---
 
