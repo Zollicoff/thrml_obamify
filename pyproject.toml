@@ -26,17 +26,14 @@ dependencies = [
   "matplotlib==3.9.2",
   "imageio==2.36.0",
   "tqdm==4.66.5",
+  "jax==0.4.35",
+  "jaxlib==0.4.35",
 ]
 
 [project.optional-dependencies]
 # Platform-specific JAX installs
-cpu = [
-  "jax==0.4.33",
-  "jaxlib==0.4.33",
-]
 metal = [
-  "jax>=0.4.33",
-  "jax-metal>=0.0.8",
+  "jax-metal==0.1.0",
 ]
 
 [project.scripts]
