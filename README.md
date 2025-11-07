@@ -1,6 +1,6 @@
-# thrml-Obamify
+# thrml_obamify
 
-**thrml-Obamify** is an experimental image transformation that uses [Extropic's `thrml` library](https://github.com/extropic-ai/thrml) to recreate any input image in the style of Barack Obama. Instead of neural nets or classical filters, it uses thermodynamic sampling via probabilistic graphical models to "cool" an image toward an Obama-like equilibrium.
+**thrml_obamify** is an experimental image transformation that uses [Extropic's `thrml` library](https://github.com/extropic-ai/thrml) to recreate any input image in the style of Barack Obama. Instead of neural nets or classical filters, it uses thermodynamic sampling via probabilistic graphical models to "cool" an image toward an Obama-like equilibrium.
 
 **✅ This implementation properly uses thrml's API** including:
 - `CategoricalNode` for multi-state pixel variables
