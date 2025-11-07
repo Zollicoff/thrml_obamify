@@ -1,4 +1,4 @@
-name: thrml-obamify
+name: thrml_obamify
 channels:
   - conda-forge
   - defaults
