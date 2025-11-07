@@ -210,8 +210,9 @@ def run_annealed_sampling(
             free_blocks  # Collect samples from free blocks
         )
 
-        # Update state for next iteration (last sample from each block)
-        current_state = sampled_states[-1]
+        # Update state for next iteration
+        # sampled_states is list[Array(n_samples, nodes)] - extract last sample from each block
+        current_state = [block_samples[-1] for block_samples in sampled_states]
 
         # Convert state back to labels array
         flat_labels = jnp.zeros(height * width, dtype=jnp.uint8)
