@@ -77,7 +77,7 @@ def run_pipeline(
         output_dir: Directory for outputs
         seed: Random seed
     """
-    print(f"🎨 Starting thrml-Obamify pipeline...")
+    print(f"🎨 Starting thrml_obamify pipeline...")
     print(f"   Source: {source}")
     print(f"   Target: {target}")
     print(f"   Steps: {steps}, Beta: {beta_start} → {beta_end}")
