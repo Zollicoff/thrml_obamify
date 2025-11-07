@@ -7,12 +7,12 @@ def test_parser_builds():
     """Test that the argument parser builds correctly."""
     parser = build_parser()
     args = parser.parse_args([
-        "--source", "assets/sample.jpg",
+        "--source", "assets/image1.png",
         "--target", "assets/obama.jpg",
         "--steps", "10",
     ])
     assert args.steps == 10
-    assert str(args.source) == "assets/sample.jpg"
+    assert str(args.source) == "assets/image1.png"
     assert str(args.target) == "assets/obama.jpg"
 
 
@@ -20,7 +20,7 @@ def test_parser_with_all_options():
     """Test parser with all options."""
     parser = build_parser()
     args = parser.parse_args([
-        "--source", "assets/sample.jpg",
+        "--source", "assets/image1.png",
         "--target", "assets/obama.jpg",
         "--steps", "100",
         "--beta_start", "0.1",

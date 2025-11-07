@@ -59,7 +59,7 @@ conda activate thrml-obamify
 
 ```bash
 obamify \
-  --source assets/your_image.jpg \
+  --source assets/image1.png \
   --target assets/obama.jpg \
   --steps 500 \
   --palette_size 24 \
