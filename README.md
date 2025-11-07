@@ -45,14 +45,14 @@ macOS (Metal / Apple Silicon):
 
 ```bash
 conda env create -f environment-macos-metal.yml
-conda activate thrml-obamify
+conda activate thrml_obamify
 ```
 
 Windows (CPU for development only):
 
 ```bash
 conda env create -f environment-windows-cpu.yml
-conda activate thrml-obamify
+conda activate thrml_obamify
 ```
 
 ### 2) Run the CLI
