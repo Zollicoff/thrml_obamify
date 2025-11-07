@@ -3,13 +3,13 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "thrml-obamify"
+name = "thrml_obamify"
 version = "0.1.0"
 description = "Energy-based image palette stylization in the spirit of 'Obamify', implemented with thrml + JAX."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "thrml-Obamify contributors"}]
+authors = [{name = "thrml_obamify contributors"}]
 keywords = ["jax", "thrml", "energy-based", "image stylization", "palette"]
 classifiers = [
   "Programming Language :: Python :: 3",
