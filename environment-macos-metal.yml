@@ -12,6 +12,6 @@ dependencies:
   - tqdm=4.66.5
   - pre-commit=3.8.0
   - pip:
-      - jax>=0.4.33
-      - jax-metal>=0.0.8
+      - jax==0.4.35
+      - jax-metal==0.1.0
       - thrml==0.1.3
