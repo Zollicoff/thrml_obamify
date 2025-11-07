@@ -1,0 +1,17 @@
+name: thrml-obamify
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip=24.2
+  - numpy=2.1.3
+  - pillow=10.4.0
+  - matplotlib=3.9.2
+  - imageio=2.36.0
+  - tqdm=4.66.5
+  - pre-commit=3.8.0
+  - pip:
+      - jax>=0.4.33
+      - jax-metal>=0.0.8
+      - thrml==0.1.3
